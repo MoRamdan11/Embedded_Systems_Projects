@@ -1,0 +1,17 @@
+.section .vectors
+.word 0x20001000 /*Stack Pointer address*/
+.word _reset
+.word Vector_Handler
+.word Vector_Handler
+.word Vector_Handler
+.word Vector_Handler
+
+.section .text
+_reset:
+  bl main
+  b .
+
+.thumb_func
+
+Vector_Handler:
+  b _reset
