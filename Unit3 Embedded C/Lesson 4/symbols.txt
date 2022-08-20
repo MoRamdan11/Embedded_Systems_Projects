@@ -1,0 +1,39 @@
+- MAIN.O
+$arm-none-eabi-nm.exe main.o
+	00000000 T mai
+
+-STARTUP.O
+$arm-none-eabi-nm.exe startup.o
+         U _E_bss
+         U _E_data
+         U _E_Text
+         U _S_bss
+         U _S_data
+00000000 W Bus_Fault_Handler
+00000000 T Default_Handler
+00000000 W H_Fault_Handler
+         U main
+00000000 W MM_Fault_Handler
+00000000 W NMI_Handler
+0000000c T Reset_Handler
+00000400 C stack_top
+00000000 W Usage_Fault_Handler
+00000000 D vectors
+
+-Lab3-Cortex-M4.elf
+$ arm-none-eabi-nm.exe Lab3-Cortex-M4.elf
+20000000 B _E_bss
+20000000 T _E_data
+00000148 T _E_Text
+20000000 B _S_bss
+20000000 T _S_data
+00000094 W Bus_Fault_Handler
+00000094 T Default_Handler
+00000094 W H_Fault_Handler
+0000001c T main
+00000094 W MM_Fault_Handler
+00000094 W NMI_Handler
+000000a0 T Reset_Handler
+20000000 B stack_top
+00000094 W Usage_Fault_Handler
+00000000 T vectors
